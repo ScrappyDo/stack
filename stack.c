@@ -21,7 +21,7 @@ void init(stackS *stack, int size)
     }
 }
 
-int pop(stackS *stack)
+int pop(stackS *stack)      /*delite  the top element*/
 {
     if(stack->top < 0)
         printf("stack is empty\n");
@@ -30,7 +30,7 @@ int pop(stackS *stack)
     return num;
 }
 
-void push(stackS *stack, int element)
+void push(stackS *stack, int element)   /*push element in the top of stack*/
 {
     if(stack->top >= stack->size - 1)
         printf("stack is full\n");
@@ -48,7 +48,7 @@ int main()
     push(stack,8);
     push(stack,9);
 
-    while(stack->top >= 0 )
+    while(stack->top >= 0 )         /*output values in stack*/
         printf("%d\n",pop(stack));
 
     free(stack->array);
